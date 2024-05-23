@@ -22,3 +22,43 @@ variable "private_subnet_cidr_blocks" {
   default     = ["10.0.3.0/24", "10.0.4.0/24"]
 }
 
+variable "eks_cluster_name" {
+  description = "Name of the EKS cluster"
+  type        = string
+}
+
+variable "eks_cluster_version" {
+  description = "Version of the EKS cluster"
+  type        = string
+  default     = "1.21"  # Example version, change as needed
+}
+
+variable "eks_instance_type" {
+  description = "Instance type for the EKS worker nodes"
+  type        = string
+  default     = "t3.medium"  # Example instance type, change as needed
+}
+
+variable "eks_node_group_name" {
+  description = "Name of the EKS node group"
+  type        = string
+}
+
+variable "eks_node_group_desired_capacity" {
+  description = "Desired capacity of the EKS node group"
+  type        = number
+  default     = 2  # Example desired capacity, change as needed
+}
+
+variable "eks_node_group_max_capacity" {
+  description = "Maximum capacity of the EKS node group"
+  type        = number
+  default     = 10  # Example maximum capacity, change as needed
+}
+
+variable "eks_node_group_min_capacity" {
+  description = "Minimum capacity of the EKS node group"
+  type        = number
+  default     = 1  # Example minimum capacity, change as needed
+}
+
