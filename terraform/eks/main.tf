@@ -7,7 +7,7 @@ resource "aws_eks_cluster" "main" {
   }
 }
 
-resource "aws_security_group" "eks_cluster" {s
+resource "aws_security_group" "eks_cluster" {
   name        = "eks_cluster_sg"
   description = "EKS Cluster security group"
   vpc_id      = var.vpc_id
